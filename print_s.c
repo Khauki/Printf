@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * p_string - prints string
+ * print_string - print string
  * @v: parameter
  * Return: integer
  */
-int p_string(va_list v)
+
+int print_string(va_list v)
 {
 	char *s;
-	int i, length = 0;
+	int i, leng = 0;
 	int value;
 
 	s = va_arg(v, char *);
@@ -20,21 +21,20 @@ int p_string(va_list v)
 		{
 			_putchar('\\');
 			_putchar('x');
-			length = length + 2;
+			leng = leng + 2;
 			value = s[i];
 			if (value < 16)
 			{
 				_putchar('0');
-				length++;
+				leng++;
 			}
-			length = length + print_hex2(value);
+			leng = leng + print_hex2(value);
 		}
 		else
 		{
 			_putchar(s[i]);
-			length++;
+			leng++;
 		}
 	}
-	return (length);
+	return (leng);
 }
-
