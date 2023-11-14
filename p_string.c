@@ -27,7 +27,7 @@ int p_string(va_list v)
 				_putchar('0');
 				length++;
 			}
-			length = length + print_hex2(value);
+			length = length + print_hexadecimal(value);
 		}
 		else
 		{

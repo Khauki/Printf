@@ -18,7 +18,7 @@ typedef struct format
 	char *ph;
 	int (*function)();
 } convert;
-int main(void);
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_percentage(void);
